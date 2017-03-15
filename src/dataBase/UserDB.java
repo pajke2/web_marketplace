@@ -42,7 +42,7 @@ public class UserDB {
 		return true;
 	}
 	
-	public static void activateUser(String username) {
+	public static boolean activateUser(String username) {
 		Connection conn = DataBase.openConnection();
 		
 		if (conn != null) {
@@ -53,15 +53,18 @@ public class UserDB {
 				String parameter = "'"+username+"'";
 				String query = "UPDATE USER SET ACTIVE = TRUE WHERE USERNAME = "+parameter;
 				stmt.executeUpdate(query);
-				System.out.println("User successfully activated");
+				
 			} catch (Exception e) {
 				System.out.println("Execute query error "+e+" "+(new Date()));
+				return false;
 			} finally {
 				DataBase.closeConnection(conn);
 			}
 		} else {
 			System.out.println("Connection problem "+(new Date()));
+			return false;
 		}
+		return true;
 	}
 	
 	public static User logInUser(String username, String password) {

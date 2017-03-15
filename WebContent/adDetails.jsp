@@ -46,7 +46,7 @@
 							Detaljno: <p id="detail">${ad.detail}</p>
 							<br>
 							<br/>
-							<a href="comments?adId=${ad.id}">komentari</a>
+							
 							Datum postavljanja: ${ad.postingDateFormated}
 							<br/>
 							

@@ -37,8 +37,8 @@ public class RegistrationServlet extends HttpServlet {
 		
 		boolean successfulRegistration = UserDB.userRegistration(firstName, lastName, email, username, password, birthday, sex, city);
 		String message;
-		if (successfulRegistration == true) {
-			boolean successful = SendMail.sendMail(email, "Aktivacija naloga na sajtu web oglasnik", "za aktivaciju vaseg naloga, kliknite na sledeci link http://localhost:8081/web_marketplace/activation?username="+username);
+		if (successfulRegistration == true) {																											   
+			boolean successful = SendMail.sendMail(email, "Aktivacija naloga na sajtu web oglasnik", "za aktivaciju vaseg naloga, kliknite na sledeci link http://webmarket.fi.cloudplatform.fi/activation?username="+username);
 			if (successful == true) {
 				message = "Uspjesno ste se registrovali, provjerite mail i kliknite na aktivacioni link da bi ste zavrsili registraciju!";
 			} else {

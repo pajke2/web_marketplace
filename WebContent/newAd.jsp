@@ -23,7 +23,9 @@
 					<div>
 				</c:if>
 				<br/>
+				<p>${message}</p>
 				<br/>
+				
 					<form action="newAd" method="post">
 					<label>Naslov oglasa: </label>
 					<input type="text" name="title" id="title" onblur="checkTitle();" required="required"/><br><br>
@@ -56,7 +58,7 @@
 					<input type="submit" value="Postavi oglas"/>
 				
 				</form>
-				<p>${message}</p>
+				
 				</div>
 			</div>
 			<div style="clear:both; "></div>

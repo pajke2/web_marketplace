@@ -54,6 +54,8 @@ public class NewAdServlet extends HttpServlet {
 			
 		} else {
 			request.setAttribute("message", "Greska u unosenju informacija prilikom dodavanja oglasa!");
+			List<Category> allCat = CategoryDB.allCategories();
+			request.setAttribute("cat", allCat);
 			RequestDispatcher rd = request.getRequestDispatcher("newAd.jsp");
 			rd.forward(request, response);
 		}

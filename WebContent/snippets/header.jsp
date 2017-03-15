@@ -3,7 +3,7 @@
 			<a href = "index.jsp"><img src="images/logo.png" width="250px"/></a>
 			</div>
 			<div style="background-color: gray ; padding:15px;">
-				<a href="index.jsp" style="color:blue">POCETNA</a> <span style="color:white">|</span> 
+				<a href="index.jsp" style="color:white">POCETNA</a> <span style="color:white">|</span> 
 				
 				<c:if test="${user == null}">
 				<a href="registration" style="color:white">REGISTRACIJA</a> <span style="color:white">|</span> 
