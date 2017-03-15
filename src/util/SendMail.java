@@ -15,7 +15,7 @@ public class SendMail {
 	
 	private static final String FROM = "weboglasnik64@gmail.com";
 	private static final String USERNAME = "weboglasnik64@gmail.com";
-	private static final String PASSWORD = "tetrapak";
+	private static final String PASSWORD = "sifra123";
 	private static final String HOST = "smtp.gmail.com";
 	private static final String PORT = "587";
 	
